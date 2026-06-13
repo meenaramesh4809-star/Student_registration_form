@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-logo left-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/13/Loyola_College_Chennai_-_Coat_of_arms.png" alt="Coat of Arms">
+        </div>
+        <div class="header-text">
+            <h1 class="one">LOYOLA COLLEGE</h1>
+            <h2 class="two">(AUTONOMOUS)</h2>
+            <p class="three">Chennai - 600034</p>
+        </div>
+        <div class="header-logo right-logo">
+            <img src="https://media.licdn.com/dms/image/v2/D5612AQExKr-1SKoMgA/article-cover_image-shrink_720_1280/B56Zh68OvfHMAI-/0/1754409267455?e=2147483647&v=beta&t=tfGsfak6jF3OjgHQjDiWIGYLy7YBWXS3eV8UQlhY4jA" alt="College Logo">
+        </div>
+    </div>
+
+    <div class="form-title">
+        <p class="six">STUDENT REGISTRATION FORM</p>
+    </div>
+
+    <div class="form-section">
+        <h2 class="section">Personal Details</h2>
+        <div class="box">
+            <div class="field-row">
+                <input type="text" placeholder="FIRST NAME" class="field" required>
+                <input type="text" placeholder="SECOND NAME" class="field">
+                <input type="text" placeholder="LAST NAME" class="field" required>
+            </div>
+            <div class="field-row">
+                <input type="date" class="field" required>
+                <input type="number" placeholder="EMIS NO" class="field" required>
+                <div class="gen">
+                    <label class="gen-label">GENDER</label>
+                    <input type="radio" name="gender" value="Male" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" value="Female" id="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" value="Other" id="other">
+                    <label for="other">Others</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2 class="section">Address Details</h2>
+        <div class="box">
+            <div class="field-row single">
+                <textarea placeholder="ADDRESS" class="field addr"></textarea>
+            </div>
+            <div class="field-row">
+                <input type="text" placeholder="CITY" class="field">
+                <input type="text" placeholder="STATE" class="field">
+                <input type="number" placeholder="PINCODE" class="field">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2 class="section">Academic Details</h2>
+        <div class="box">
+            <div class="field-row single">
+                <input type="text" placeholder="SCHOOL NAME" class="field">
+            </div>
+            <div class="field-row">
+                <input type="number" placeholder="YEAR OF PASSING" class="field">
+                <input type="number" placeholder="12TH PERCENTAGE" class="field" required>
+                <input type="text" placeholder="GROUP STUDIED" class="field" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2 class="section">Course Selection</h2>
+        <div class="box course-box">
+            <div class="course-row">
+                <div class="course-col">
+                    <label class="field-label">Department :</label>
+                    <select class="field dept">
+                        <option value="">Select Department</option>
+                        <option value="ECE">Electronics and Communication Engineering</option>
+                        <option value="cse">Computer Science Engineering</option>
+                        <option value="eee">Electrical and Electronics Engineering</option>
+                        <option value="mech">Mechanical Engineering</option>
+                        <option value="civil">Civil Engineering</option>
+                        <option value="it">Information Technology</option>
+                    </select>
+                </div>
+                <div class="course-col">
+                    <label class="field-label">Hostel Required :</label>
+                    <div class="radio-group">
+                        <input type="radio" name="hostel" value="Yes" id="hostel-yes">
+                        <label for="hostel-yes">YES</label>
+                        <input type="radio" name="hostel" value="No" id="hostel-no">
+                        <label for="hostel-no">NO</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="form-section">
+        <h2 class="section">Parent / Guardian Details</h2>
+        <div class="box">
+            <div class="field-row">
+                <input type="text" placeholder="FATHER NAME" class="field">
+                <input type="text" placeholder="MOTHER NAME" class="field">
+                <input type="text" placeholder="PARENT PHONE NO" class="field">
+                <input type="text" placeholder="OCCUPATION" class="field">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2 class="section">Documents Required</h2>
+        <div class="box doc-box">
+            <div class="doc-row">
+                <div class="doc-item">
+                    <label class="doc-label">Passport Size Photo :</label>
+                    <input type="file" accept="image/*" class="doc-input">
+                </div>
+                <div class="doc-item">
+                    <label class="doc-label">12th Marksheet :</label>
+                    <input type="file" accept=".pdf" class="doc-input">
+                </div>
+                <div class="doc-item">
+                    <label class="doc-label">Aadhar Card :</label>
+                    <input type="file" accept="image/*" class="doc-input">
+                </div>
+                <div class="doc-item">
+                    <label class="doc-label">Transfer Certificate :</label>
+                    <input type="file" accept=".pdf" class="doc-input">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="declaration">
+        <input type="checkbox" id="declare" required>
+        <label for="declare">
+            I hereby declare that the information provided by me in this registration form is true and correct to the best of my knowledge. I understand that any false information may lead to the cancellation of my admission.
+        </label>
+    </div>
+
+    <div class="btn-row">
+        <input type="submit" value="Submit" class="sub">
+        <input type="reset" value="Reset" class="sub1">
+    </div>
+</body>
+</html>
